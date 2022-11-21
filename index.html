@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiqueta de imagenes Svg</title>
+</head>
+<body>
+    <h1>Ejemplo de imagen Svg</h1>
+    <svg width="400px" height="400px" viewBox="0 0 400 400">
+        <image width="400px" height="400px" xlink:href="img/Goofy_Farmer.svg"></image>
+    </svg>
+<h2>Creación de grupos con código Svg</h2>
+<h3>Todos los elementos del grupo compartiran los atributos del grupo</h3>
+<ul>
+    <li>Circulo</li>
+    <svg width="600px" height="200px" viewbox="0 0 600 200 ">
+        <g id="grupo-1" fill="red" stroke="blue" stroke-width="3">
+         <circle cx="50" cy="50" r="40"></circle> 
+         <rect x="100" y="20" width="200" height="75"></rect>
+         <ellipse cx="400" cy="60" rx="45" ry="20" ></ellipse>
+         <line x1="450" y1="0" x2="1000" y2="380" ></line>
+        </g>
+    </svg>
+    </svg>
+    <h2>Creación de figuras con código Svg</h2>
+    <li>Circulo</li>
+    <svg width="100px" height="100px" viewbox="0 0 100 100 ">
+         <circle cx="50" cy="50" r="40" fill="green" stroke="red" stroke-width="3"></circle> 
+    </svg>
+
+    <li>Rectángulo</li>
+    <svg width="600px" height="200px" viewbox="0 0 600 200">
+        <rect x="20" y="20" width="200" height="75" fill="yellow" stroke="green" stroke-width="3"></rect>
+    </svg>
+
+    <li>Elipse</li>
+    <svg width="450px" height="300px" viewbox="400 0 200 600">
+        <ellipse cx="300" cy="100" rx="200" ry="50" fill="red" stroke="green" stroke-width="3"></ellipse>
+    </svg>
+
+    <li>Línea</li>
+    <svg width="600px" height="200px" viewbox="0 0 600 200">
+        <line x1="0" y1="0" x2="100" y2="100" stroke="red" stroke-width="3"></line>
+    </svg>
+</ul>
+<h2>Degradados en Imagenes Svg</h2>
+<svg width="600px" height="200px" viewBox="0 0 600 200">
+    <defs>
+        <linearGradient id="gradiente">
+            <stop offset="10%" stop-color="green"/>
+            <stop offset="90%" stop-color="yellow"/>
+        </linearGradient>
+    </defs>
+    <circle cx="50" cy="50" r="40" fill="url(#gradiente)" stroke="black" stroke-width="3"></circle> 
+    <rect x="100" y="20" width="200" height="75" fill="url(#gradiente)" stroke="black" stroke-width="3"></rect>
+</svg>
+<p>En este caso podermos darle diferentes posiciones al mismo elemento</p>
+<svg width="600px" height="200px" viewBox="0 0 600 200">
+    <title>Título del elemento</title>
+    <desc>Descripción del elemento</desc>
+    <defs>
+        <rect id="cuadrado" width="50" height="50" fill="url(#gradiente)" stroke="black" stroke-width="3"></rect>
+    </defs>
+    
+    <use xlink:href="#cuadrado" x="20" y="20"></use>
+    <use xlink:href="#cuadrado" x="100" y="100"></use>
+    
+
+<p>En el caso anterior la etiquete title y la etiqueta desc funcionan como etiquetas semánticas ya que el usuario no las ve.</p>
+
+<p>Para imagenes más complejas podemos usar herramientas online o adobe illustrator.</p>
+</body>
+</html>
